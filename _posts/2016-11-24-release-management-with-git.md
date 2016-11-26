@@ -20,7 +20,7 @@ So here's a neat solution.. With a bit of discipline in your team and the use a 
 * You have to be using a [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) repository for Source Control.
 * You must be using a standard [gitflow](http://nvie.com/posts/a-successful-git-branching-model/). This is one that works well.
 * You must be using [Maven](https://maven.apache.org/what-is-maven.html) for the build of your project
-* You must use the maven-commit-id-plugin
+* You must use the [maven-commit-id-plugin](https://github.com/pankajtandon/maven-git-commit-id-plugin)
 
 
 #### Next, the discipline :
