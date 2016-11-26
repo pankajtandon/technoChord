@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Jekyll Clean Theme"
-date: 2014-08-22 16:25:06 -0700
+title: "The sample that came along with the orig theme"
+date: 2014-09-12 16:25:06 -0500
 comments: false
 ---
 
