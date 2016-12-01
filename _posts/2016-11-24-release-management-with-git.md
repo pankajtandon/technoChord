@@ -96,16 +96,26 @@ And your project pom is configured like so:
         </execution>
     </executions>
     <configuration>
+        <!-- required: Base .git dir -->
         <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-        <tagNameRegex>R_[0-9].[0-9].[0-9].*</tagNameRegex>
+        
+        <!-- required: Tells the plugin where to start generation from -->
+        <startTag>R_1.0.1</startTag> 
+        
+        <!-- optional: Only pick matching tags, else all are picked -->
+        <tagNameRegex>R_[0-9].[0-9].[0-9].*</tagNameRegex> 
+        
+        <!-- optional: Only pick matching commits, else all are picked -->
         <commitMessageRegex>STW-[0-9][0-9][0-9]</commitMessageRegex>
+         
+        <!-- optional: where to place the generated JSON file. Default is target -->  
         <releaseNotesFileName>${project.basedir}/src/main/webapps/rel-notes.json</releaseNotesFileName>
     </configuration>
 </plugin>
  ...           
 ```
 
-**Then** the above commit graph will produce a JSON below:
+**Then** the above commit graph will produce a JSON file like below:
 
 ```
 {  
