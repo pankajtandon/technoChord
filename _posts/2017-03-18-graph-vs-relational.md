@@ -17,13 +17,10 @@ reaches out to me, a "Consultant" :) for help
 Here are his primary set of questions:
 
 * How much inventory should I keep?
-* How can I lower transportation costs?
-* How can I predict demand?
 * How can I track my sales in all states where I have stores?
 * How can I analyze what books are sold in what markets?
 * When should I use promotions?
 * How can I negotiate my RMAs (Return to Manufacturer Agreements)?
-* How much should I spend on advertisement and of what kind?
 
 We engage and here is what emerges:
 
@@ -197,9 +194,11 @@ The first thing to notice is that the optional "properties" of _color_ and
  _packaging_ is handled via a relationship instead of as an inline property of
  the _book_ (such as is the case with price).
 
-So now let's create the TRANSACTION table in MySQL.
 
-Please create a database and run the following DDL and INSERT statements
+Now let's create the TRANSACTION table in MySQL.
+
+Please create a database and run the appropriate DDL and INSERT statements to yield
+the following data in the TRANSACTION table:
 
 <pre>
 id bookId, qty, price, storeId
@@ -268,6 +267,7 @@ Here's an example of how this model can be queried using plain Cypher querries:
 
 Give me all books that are red in color, printed in Gautemala, sold in PA and cost
 more than $10.00
+
 <pre>
 MATCH (b:Book)-[:PUBLISHED_BY]->()-[:PRINTS_AT]->()-[:LOCATED_IN]->(c:Country),
 (b:Book)-[:REFLECTS]-(r:Color),
