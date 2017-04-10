@@ -45,7 +45,7 @@ like MySQL or Oracle.
 What would that entail? Perhaps this DDL will be a good indication:
 
 <p align="center">
-  <img src="{{ site.baseurl}}/images/ERD.png"/>
+  <img src="{{ site.baseurl}}/images/erd.png" width="600" height="400"/>
 </p>
 
 #### Challenges
