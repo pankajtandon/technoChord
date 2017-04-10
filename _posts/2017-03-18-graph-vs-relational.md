@@ -185,7 +185,7 @@ call db.schema;
 
 This yields:
 <p align="center">
-  <img src="{{site.baseurl}}/images/schema.png" width="600" height="400"/>
+  <img src="{{site.baseurl}}/images/schema.png" width="800" height="400"/>
 </p>
 
 But since we don't have much data, we can actually pull the entire dataset and view
@@ -238,12 +238,12 @@ associated it to the relationship.
 
 This yields the following schema:
 <p align="center">
-  <img src="{{site.baseurl}}/images/data-equivalence-schema.png" width="600" height="400"/>
+  <img src="{{site.baseurl}}/images/data-equivalence-schema.png" width="600" height="500"/>
 </p>
 
 And the same relationship is displayed with the data:
 <p align="center">
-  <img src="{{site.baseurl}}/images/data-equivalence.png" width="600" height="400"/>
+  <img src="{{site.baseurl}}/images/data-equivalence.png" width="600" height="450"/>
 </p>
 
 
@@ -320,7 +320,7 @@ CREATE
 
 
 <p align="center">
-  <img src="{{site.baseurl}}/images/data-with-shipping-pol.png"/>
+  <img src="{{site.baseurl}}/images/data-with-shipping-pol.png" width="600" height="450"/>
 </p>
 
 
