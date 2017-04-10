@@ -9,10 +9,6 @@ published: true
 I recently took a small detour to learing about graph databases.
 Here are some notes about my findings:
 
-Real life data is chaotic.
-
-Here's a scenario:
-
 A friend of a friend (Donald), runs a business that sells school books to
 various schools (both public and charter).
 Just like any other business, he feels that he can improve his bottom line and
@@ -42,7 +38,7 @@ We engage and here is what emerges:
 At this time I'm tempted to place this information in a fully normalized RDBMS
 like MySQL or Oracle.
 
-What would that entail? Perhaps this DDL will be a good indication:
+What would that entail? Perhaps this ERD will be a good indication:
 
 <p align="center">
   <img src="{{ site.baseurl}}/images/erd.png" width="600" height="400"/>
@@ -59,7 +55,6 @@ sparsely populated.
  So, _Harry Potter - The Deathly Hallows_ sold in Seattle may have a different
  id that the same book sold in NewYork. Therefore, in the TRANSACTION table,
  we cannot rely on the fact that the same _ID_ will refer to the same _book_.
-
  This causes reports (that are used by the PUBLISHERs for analysis) built off
  of the TRANSACTION table, to be messed up.
 1. This equivalence of Ids is different for different PUBLISHERs. For example,
@@ -70,7 +65,7 @@ sparsely populated.
 with each BOOK, keep changing.
 
 As we can see, the above challenges _can_ be solved using a RDBMS based storage
-solution and have been for years). But in this post, I'd like to suggest how to use a
+solution (and have been for years). But in this post, I'd like to suggest how to use a
 combination of a Graph db _and_ an RDBMS to reduce the pain in addressing these
 challenges.
 
@@ -87,7 +82,10 @@ would be dimension tables.
 Then we will store all dimension data in a Graph db and store the transaction
 data in an RDBMS.
 
-The rationale for this is that
+The rationale for this is that dimensions are what Graphs are good at manipulating and
+maintaining. There is not much churn on fact tables, but their normalized nature
+tends to make them good candidates for the RDBMS.
+
 Note that dimension tables tend to be smaller than fact tables in most domains.
 But that has no bearing on the above strategy.
 
@@ -98,7 +96,7 @@ We will use Neo4J for our Graph db and MySQL for our RDBMS.
 Please [download](https://neo4j.com/download/) and [install](https://neo4j.com/docs/operations-manual/current/installation/)
 neo4j (Should take ~ 5 mins!)
 
-Then experiment with the sample movie db (1 hour max)
+Then experiment with the sample movie db (should take no more than an hour max)
 
 Then, in your browser at localhost:7474, copy and paste this into your command window and execute it.
 
