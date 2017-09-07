@@ -5,7 +5,13 @@ date: 2016-10-22 16:25:06 -0500
 comments: true
 ---
 
-#### To find out what a certain commiter worked on:
+#### To show all branches and their committers in reverse chronological order:
+
+```
+git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5nr -k2Mr -k3nr -k4nr
+```
+
+#### To find out what a certain committer worked on:
 
 ```
 git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n | grep -i pankaj
