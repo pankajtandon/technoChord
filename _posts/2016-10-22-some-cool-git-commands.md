@@ -18,13 +18,13 @@ git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | 
 
 ```
 
-#### To find all files committed by a certain author:
+#### To list all files committed by author:
 
 ```
 git ls-tree -r --name-only HEAD  | xargs -n1 git blame --line-porcelain HEAD | grep  "^filename \|^author " | awk '(NR%2){print$0p }{p="-"$0}' | sort | uniq -c
 ```
 
-##### exclude hidden files:
+###### ...and exclude hidden files:
 ```
 git ls-tree -r --name-only HEAD  | grep -v "^\." | xargs -n1 git blame --line-porcelain HEAD | grep  "^filename \|^author " | awk '(NR%2){print$0p }{p="-"$0}' | sort | uniq -c
 ```
