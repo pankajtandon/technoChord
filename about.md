@@ -21,4 +21,4 @@ Because...
 <p align="left">
   <img src="{{ site.baseurl}}/images/bow.gif"/>
 </p>
-~ Your's truly 
+¯\_(ツ)_/¯
