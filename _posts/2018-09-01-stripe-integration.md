@@ -6,12 +6,12 @@ comments: true
 published: true
 ---
 
-Integrate Stripe easily into your Spring Boot apps
 
-Stripe is the popular Payment Gateway that allows websites' customers to pay you, the website owner. It deals with the complicated
-stuff like Credit Card data, security and PII and offers an API that will allow you to deal with the easy stuff.
+[Stripe](https://stripe.com) is the popular Payment Gateway that allows websites' customers to pay ecommerce site owners.
+It deals with the complicated stuff like _Credit Card data, security and PII_ and offers an API that will allow you,
+the website owner/developer to deal with the easy stuff.
 
-This `easy stuff` falls in four categories:
+This _easy stuff_ falls in four categories:
 
 1. Stuff you do one time during Stripe account setup:
    - Setting up the Project (aka Product). Typically this is one  per website.
@@ -38,7 +38,7 @@ The answer to that of course is based on performance, audit and storage constrai
 the single link that ties the two models together is the `customerId`.
 
 <p align="center">
-  <img src="{{site.baseurl}}/images/stripe.png" width="600" height="450"/>
+  <img src="{{site.baseurl}}/images/stripe.png" width="600" height="300"/>
 </p>
 
 As we can see above, the `customerId` is mapped to the `userId` which is the the `Id` of the `User` object in the Widget Spring Boot App.
