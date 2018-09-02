@@ -7,29 +7,28 @@ published: true
 ---
 
 
-[Stripe](https://stripe.com) is the popular Payment Gateway that allows websites' customers to pay ecommerce site owners.
-It deals with the complicated stuff like _Credit Card data, security and PII_ and offers an API that will allow you,
+[Stripe](https://stripe.com) is the popular Payment Gateway that allows websites' owners to make money by accepting payments online.
+The [Stripe API](https://stripe.com/docs/api/java#events) deals with the complicated stuff like _Credit Card data, security and PII_ and offers an API that will allow you,
 the website owner/developer to deal with the easy stuff.
 
 This _easy stuff_ falls in four categories:
 
 1. Stuff you do one time during Stripe account setup:
-   - Setting up the Project (aka Product). Typically this is one  per website.
-   - Setting up Payment Plans - How often and how much will your customers pay you.
-   - Setting up coupons - these are discounts/promotions that are set up per plan.
+   - Setting up the Project (aka `Product`). Typically this is one  per website.
+   - Setting up Payment `Plans` - How often and how much will your customers pay you.
+   - Setting up `Coupons` - these are discounts/promotions that are set up per plan.
 
 2. Stuff that needs to happen with every user sign-up, or purchase:
-   - Creating a Customer - happens when a user registers on your website.
-   - Creating a Plan - This specifies the amount and frequency of the charge.
-   - Creating a Subscription - ties a Customer to a Plan.
-   - Creating a Transaction - When a charge is made.
+   - Creating a `Customer` - happens when a user registers on your website.
+   - Creating a `Subscription` - ties a Customer to a Plan.
+   - Creating a `Transaction` - When a charge is made.
 
 3. Stuff that is done behind the scenes at a pre-configured cadence by Stripe:
-   - Prepare Invoices
+   - Prepare `Invoices`
    - Prepare scheduled reports
 
 4. Events
-   - Provide notifications via callbacks when pre-defined events like charge.succeeded, customer.created etc occur.
+   - Provide notifications via callbacks when pre-defined events like `charge.succeeded`, `customer.created` etc occur.
 
 
 When integrating this rich Stripe API with your application, the first question that has to be answered is:
